@@ -1,7 +1,12 @@
 function multiplyBetween(num1, num2) {
-    // Your code here
+    let multiply = 0;
+    for (i = num1; i < num2; i++) {
+        multiply = (multiply == 0) ? 1 : multiply;
+        multiply *= i;
+    }
 
+    return multiply;
 }
 
-let output = multiplyBetween(2, 5);
+var output = multiplyBetween(2, 5);
 console.log(output); // --> 24

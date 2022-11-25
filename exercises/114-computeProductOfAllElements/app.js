@@ -1,7 +1,13 @@
 function computeProductOfAllElements(arr) {
-  // your code here
+  let m = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+      m = (m == 0) ? 1 : m;
+      m *= arr[i];
+  }
+
+  return m;
 }
 
-let output = computeProductOfAllElements([2, 5, 6]);
+var output = computeProductOfAllElements([2, 5, 6]);
 console.log(output); // --> 60
-

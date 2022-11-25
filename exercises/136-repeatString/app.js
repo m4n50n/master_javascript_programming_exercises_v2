@@ -1,6 +1,11 @@
 function repeatString(string, num) {
-    // your code here
+    let arr = [];
+    for (i=0; i<num; i++) {
+        arr.push(string);
+    }
+
+    return arr.join("");
 }
 
-let output = repeatString('code', 3);
+var output = repeatString('code', 3);
 console.log(output); // --> 'codecodecode'

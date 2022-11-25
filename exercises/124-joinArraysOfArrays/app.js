@@ -1,5 +1,10 @@
 function joinArrayOfArrays(arr) {
-  // your code here
+  let f = [];
+  for (let i = 0; i < arr.length; i++) {
+    f = f.concat(arr[i]);
+  }
+
+  return f;
 }
-let output = joinArrayOfArrays([[1, 4], [true, false], ['x', 'y']]);
+var output = joinArrayOfArrays([[1, 4], [true, false], ['x', 'y']]);
 console.log(output); // --> [1, 4, true, false, 'x', 'y']

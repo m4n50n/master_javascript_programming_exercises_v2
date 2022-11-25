@@ -1,3 +1,14 @@
 function getAllKeys(obj) {
-  // your code here
+  let arr = [];
+  for (o in obj) {
+    arr.push(o);
+  }
+
+  return arr;
 }
+
+console.log(getAllKeys({
+  name : 'Sam',
+  age : 25,
+  hasPets : true
+}));

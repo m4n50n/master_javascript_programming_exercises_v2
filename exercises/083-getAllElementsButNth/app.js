@@ -1,6 +1,14 @@
 function getAllElementsButNth(array, n) {
-    // Write your function here
+    let arr = [];
+    array.forEach(function(value, index) { 
+        if (index != n) {
+            arr.push(value);
+        }
+    });
 
+    return arr;
 }
-let output = getAllElementsButNth(['a', 'b', 'c'], 1);
+
+
+var output = getAllElementsButNth(['a', 'b', 'c'], 1);
 console.log(output); // --> ['a', 'c']

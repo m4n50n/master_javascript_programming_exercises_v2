@@ -3,21 +3,26 @@ function PhoneNumberFormatter(numbers) {
 }
 
 PhoneNumberFormatter.prototype.render = function() {
-  let string = '';
-  // your code here
-  return string;
+  var string = '';
+	string += this.parenthesize(this.getAreaCode());
+	string += ' ';
+	string += this.getExchangeCode();
+	string += '-';
+	string += this.getLineNumber();
+	
+	return string;
 };
 
 PhoneNumberFormatter.prototype.getAreaCode = function() {
-  // your code here
+  return this.slice(0, 3);
 };
 
 PhoneNumberFormatter.prototype.getExchangeCode = function() {
-  // your code here
+ 	return this.slice(3, 6);
 };
 
 PhoneNumberFormatter.prototype.getLineNumber = function() {
-  // your code here
+  return this.slice(6);
 };
 
 PhoneNumberFormatter.prototype.parenthesize = function(string) {
@@ -27,3 +32,7 @@ PhoneNumberFormatter.prototype.parenthesize = function(string) {
 PhoneNumberFormatter.prototype.slice = function(start, end) {
   return this.numbers.slice(start, end).join('');
 };
+
+let arr = [6, 5, 0, 8, 3, 5, 9, 1, 7, 2];
+var phoner = new PhoneNumberFormatter(arr);
+console.log(phoner.render());

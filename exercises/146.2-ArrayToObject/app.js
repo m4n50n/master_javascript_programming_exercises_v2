@@ -1,5 +1,10 @@
 function fromListToObject(array) {
-  // your code here
+  let objecto = {};
+  array.forEach(function(value, index) {
+    objecto[value[0]] = value[1];
+  });
+
+  return objecto;
 }
 
 let output = fromListToObject([['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]])

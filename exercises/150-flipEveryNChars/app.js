@@ -1,7 +1,14 @@
 function flipEveryNChars(input, n) {
-    // your code here
+    let inverted = "";
+    let fin = 0;
+    for (i = fin; i < input.length; i++) {
+        inverted += input.slice(fin, fin + n).split("").reverse().join("");
+        fin += n;
+    }
+
+    return inverted;
 }
 
-let input = 'a short example';
-let output = flipEveryNChars(input, 5);
+var input = 'a short example';
+var output = flipEveryNChars(input, 5);
 console.log(output); // --> ohs axe trelpma

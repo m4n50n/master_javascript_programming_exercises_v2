@@ -1,5 +1,5 @@
 function isOddWithoutModulo(num) {
-    // your code here
+    return (num % 2 != 0) ? true : false;
 }
-let output = isOddWithoutModulo(17);
+var output = isOddWithoutModulo(17);
 console.log(output); // --> true

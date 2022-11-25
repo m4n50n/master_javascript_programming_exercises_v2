@@ -1,4 +1,9 @@
 function isPersonOldEnoughToVote(person) {
-  // Add your code after this line
-  
+  return person.age >= 18;
 }
+
+var obj = {
+  age: 19
+};
+var output = isPersonOldEnoughToVote(obj);
+console.log(output); // --> true

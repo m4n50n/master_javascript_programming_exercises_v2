@@ -1,4 +1,9 @@
 function isPersonOldEnoughToDrink(person) {
-  // Add your code after this line
-  
+  return person.age >= 21;
 }
+
+var obj = {
+  age: 16
+};
+var output = isPersonOldEnoughToDrink(obj);
+console.log(output); // --> false

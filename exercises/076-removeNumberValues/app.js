@@ -1,11 +1,17 @@
-let obj = {
+var obj = {
     a: 2,
     b: 'remaining',
     c: 4
 };
 function removeNumberValues(obj) {
-    // your code here
-    
+    for (const o in obj) {
+        //if (typeof obj[o] == "number") {
+        if (!isNaN(obj[o])) {
+            delete obj[o];
+        }
+    }
+
+    return obj;
 }
 
 removeNumberValues(obj);

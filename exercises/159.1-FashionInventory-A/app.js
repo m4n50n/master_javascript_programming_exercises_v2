@@ -1,4 +1,4 @@
-let currentInventory = [
+var currentInventory = [
     {
         name: 'Brunello Cucinelli',
         shoes: [
@@ -18,9 +18,21 @@ let currentInventory = [
 ];
 
 function renderInventory(inventory) {
-    // your code here
-    // hint: before you just dive into coding...
-    // it's a good idea to sketch out a skeleton like you've been seeing earlier in this module...
+    let render = [];
+
+    for (index in inventory) {
+        let designer = inventory[index].name;
+        let shoes = inventory[index].shoes;
     
+        for (key in shoes) {
+            let name = shoes[key].name;
+            let price = shoes[key].price;
+
+            render.push([designer, name, price]);
+        }
+    }
+
+    return render;
 }
-console.log(renderInventory(currentInventory))
+
+console.log(renderInventory(currentInventory));
